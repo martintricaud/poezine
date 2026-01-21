@@ -13,7 +13,7 @@ dans le sable d’une plage sur les bords de la Spree
 De saint Antoine de Padoue il était à l’effigie :  
 Ci git - on ne sait pas où - le saint patron des choses égarées.  
 
-J’ai perdu un ami à quinze ans dans la foule -  
+J’ai perdu un ami à quinze ans dans la foule -  
 je l’ai revu mais jamais retrouvé  
 Et mes lunettes de soleil bien souvent :  
 celles-ci dans l’océan, emportées par la houle,  
