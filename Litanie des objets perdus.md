@@ -1,6 +1,4 @@
-[[2024-02-08]]
-[[2024-07-05]]
-**Objets Perdus**
+**Litanie des objets perdus**
 
 J’ai perdu ma vieille casquette dans ce club très chic 
 rue du Bourg l’Abbé,
