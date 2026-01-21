@@ -22,7 +22,7 @@ celles-là dans un jardin dont je t’ai déjà parlé
 J’ai perdu un paquet de cigarettes dans une soirée déguisée  
 et ma dignité dans l’ivresse pour une fille que je désirais  
 et qui ne m’aimait pas.  
-J’ai perdu une chemise dans une autre soirée,  
+J’ai perdu une chemise dans une autre soirée,  
 avec cette autre fille que je désirais  
 et que je n’aimais pas.  
 Elle a perdu de son intérêt  
