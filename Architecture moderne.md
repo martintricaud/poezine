@@ -3,7 +3,7 @@
 Je suis ce bâtiment  
 de style brutaliste  
 humble et nu et pourtant  
-majestueux - comme un Christ  
+majestueux - comme un Christ   
 je suis perclus de fers,  
 laid et beau à la fois,  
 moderne et d’autrefois,  
