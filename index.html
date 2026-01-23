@@ -4,65 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tiny.css@0.12/dist/tiny.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
+        * {
+            font-family: "Inria Serif";
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: var(--text-main);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
         body {
-            padding: 20px;
+      
+            display: flex;
+            flex-direction: row;
+            gap: 2em;
+            justify-content: center;
         }
-        main {
-            max-width: 900px;
+
+        body:has(.focus) {
+            justify-content: flex-start;
         }
-        table {
-            width: 100%;
-            overflow-x: auto;
+
+        nav,
+        .main {
+            padding-top: 0 !important;
+        }
+
+        nav {
+            display: block;
+            text-align: right;
+            width: 25ch;
+            background-color: var(--background-body);
+        }
+
+        .main div {
+            min-width: 50ch;
+        }
+
+        .hidden {
+            display: none
+        }
+
+        .hidden:target {
+            display: block;
+        }
+
+        #mymenu {
+            padding-top: 2.5rem;
+            width: 25ch;
+            position: fixed;
+            top: 0;
+            color-scheme: dark;
+            background-color: var(--background-body);
+        }
+
+        p {
+            padding: 0 0.8em;
+            line-height: 1.5em;
+        }
+
+        #mymenu:not(:has(.focus)) {
+            text-align: center;
+        }
+
+        /* If nav has a poemtitle currently focused, but nav is not currently hovered, then poemtiles not in focus are hidden */
+        nav:has(.focus):not(:hover) .poemtitle:not(.focus) {
+            display: none;
+        }
+
+        nav:has(.focus):hover .poemtitle:not(.focus) {
+            display: block;
+            opacity: 0.4
+        }
+
+        section {
+            padding-top: 3rem;
+        }
+
+        .poemtitle {
+            font-size: 1.1rem;
+            display: block;
+
+            &:hover {
+                font-style: italic;
+            }
+        }
+
+        @media (max-width: 80ch) {
+            nav {
+                text-align: center;
+            }
+
+            #mymenu {
+                width: 100vw;
+                padding-bottom: 1rem;
+            }
+
+            body {
+                flex-direction: column
+            }
         }
     </style>
 </head>
 <body>
-    <main>
-        <div id="litanie">Loading...</div>
-        <hr>
+    <nav>
+        <div id="mymenu"></div>
+    </nav>
+    <div class="main">
+        <!-- <div id="litanie">Loading...</div>
         <div id="ciel-de-traine">Loading...</div>
-         <hr>
         <div id="jardin-de-ville">Loading...</div>
-         <hr>
-        <div id="architecture-moderne">Loading...</div>
-    </main>
-
+        <div id="architecture-moderne">Loading...</div> -->
+    </div>
+    <script src="
+https://cdn.jsdelivr.net/npm/umbrellajs@3.3.3/umbrella.min.js
+"></script>
     <script>
-        fetch('Litanie des objets perdus.md')
-            .then(res => res.text())
-            .then(md => {
-                document.getElementById('litanie').innerHTML = marked.parse(md);
-            })
-            .catch(error => {
-                document.getElementById('litanie').innerHTML = `<div class="error">Error loading Notes.md: ${error.message}</div>`;
-            });
-         fetch('Ciel de traine.md')
-            .then(res => res.text())
-            .then(md => {
-                document.getElementById('ciel-de-traine').innerHTML = marked.parse(md);
-            })
-            .catch(error => {
-                document.getElementById('ciel-de-traine').innerHTML = `<div class="error">Error loading Notes.md: ${error.message}</div>`;
-            });
-        fetch('Jardin de ville.md')
-            .then(res => res.text())
-            .then(md => {
-                document.getElementById('jardin-de-ville').innerHTML = marked.parse(md);
-            })
-            .catch(error => {
-                document.getElementById('jardin-de-ville').innerHTML = `<div class="error">Error loading Notes.md: ${error.message}</div>`;
-            });
-      fetch('Architecture moderne.md')
-            .then(res => res.text())
-            .then(md => {
-                document.getElementById('architecture-moderne').innerHTML = marked.parse(md);
-            })
-            .catch(error => {
-                document.getElementById('architecture-moderne').innerHTML = `<div class="error">Error loading Notes.md: ${error.message}</div>`;
-            });
+        [
+            { file: "Ciel de traine", id: "ciel-de-traine" },
+            { file: "Architecture moderne", id: "architecture-moderne" },
+            { file: "Jardin de ville", id: "jardin-de-ville" },
+            { file: "Litanie des objets perdus", id: "litanie" },
+        ].forEach(({ file, id }) => {
+            fetch(file + '.md')
+                .then(res => res.text())
+                .then(md => {
+                    u("#mymenu").append(u(
+                        `<a 
+                            class="poemtitle" 
+                            href=${"#" + id}
+                        >
+                            ${file}
+                        </a>`
+                    ))
+                    u(".main").append(`<section id=${id}></section>`)
+                    u("#" + id).html(marked.parse(md));
+                    u("#" + id).addClass("hidden");
+
+                    u(".poemtitle").each(el => {
+                        u(el).on('click', (e) => {
+                            changeFocus(u(el), ".poemtitle");
+                        });
+                    });
+                })
+                .catch(error => {
+                    u("#" + id).html(`<div class="error">Error loading Notes.md: ${error.message}</div>`);
+                });
+        })
+
+        function changeFocus(target, group) {
+            u(group).each(el => { u(el).removeClass("focus") })
+            u(target).addClass("focus")
+        }
+
     </script>
 </body>
 </html>

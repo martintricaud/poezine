@@ -1,5 +1,3 @@
-**Litanie des objets perdus**
-
 J’ai perdu ma vieille casquette  
 dans ce club très chic rue du Bourg l’Abbé  
 Dans une brasserie près de Montparnasse  

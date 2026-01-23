@@ -1,5 +1,3 @@
-**Jardin de ville**  
-  
 Je suis une maison de ville  
 aux balcons encore ivres d’un souvenir de fleurs  
 qui avise la rue d’un oeil de boeuf rieur,  
