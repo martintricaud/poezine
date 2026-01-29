@@ -7,24 +7,24 @@ ou il pleuvait, et l’on travaillait dur
   
 J’ai perdu un médaillon acheté en Italie  
 dans le sable d’une plage sur les bords de la Spree  
-De saint Antoine de Padoue il était à l’effigie :  
+De saint Antoine de Padoue il était à l’effigie  
 Ci git - on ne sait pas où - le saint patron des choses égarées  
 
 J’ai perdu un ami à quinze ans dans la foule  
 Je l’ai revu mais jamais retrouvé  
-Et mes lunettes de soleil bien souvent :  
+Et mes lunettes de soleil bien souvent  
 Celles-ci dans l’océan, emportées par la houle  
 Celles-là dans un jardin dont je t’ai déjà parlé  
   
 J’ai perdu un paquet de cigarettes  
 dans une soirée déguisée  
 Et ma dignité dans l’ivresse, pour une fille  
-que je désirais, et qui ne m’aimait pas.  
+que je désirais, et qui ne m’aimait pas  
 J’ai perdu une chemise dans une autre soirée,  
 avec cette autre fille  
-que je désirais, et que je n’aimais pas.  
+que je désirais, et que je n’aimais pas  
 Elle a perdu de son intérêt  
-Je l’ai perdue de vue.  
+Je l’ai perdue de vue  
 
 J’ai perdu un petit carnet  
 plein de dessins et de mots amers  
@@ -47,18 +47,18 @@ J’ai perdu le fil de mes pensées
 et parfois je l’ai retrouvé  
 J’ai perdu espoir  
 et toujours je l’ai retrouvé  
-J’ai perdu mon temps -  
+J’ai perdu mon temps  
 Je l’ai juste perdu  
   
-J’ai perdu de l’argent et je m’en suis moqué.  
+J’ai perdu de l’argent et je m’en suis moqué  
 J’en ai regagné, j’en fus soulagé  
 un instant, presque heureux  
-Puis je l’ai dépensé, et je m’en suis moqué.  
+Puis je l’ai dépensé, et je m’en suis moqué  
 
 J’ai perdu la face, mon sang froid,  
 Ma patience, presque ma foi  
 Et un amour que je chérissais tant  
-Trois fois.  
+Trois fois  
 
 J’ai perdu et j’ai doublé la mise  
 Je cours de martingale en martingale  

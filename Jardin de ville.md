@@ -11,7 +11,7 @@ Le tout a un certain cachet
 un charme un peu bohème  
 un peu bourgeois tout de même  
 Mais néanmoins empreint d’une sorte de candeur  
-J’entends par là que je ne suis pas snob, d’ailleurs :  
+J’entends par là que je ne suis pas snob, d’ailleurs  
   
 Mon imposante porte cochère  
 conte à voix basse aux passants mes secrets  
@@ -29,15 +29,16 @@ Alors je me sens deviné foisonnant de verdure
 par un âme rêveuse qui repousse mes murs  
 qui voyant un bourgeon tout à coup se figure  
 la tige qui le porte, la prolonge en ramures  
-en extrapole un arbre - puis deux, puis trois, puis cent  
+en extrapole un arbre, puis deux, puis trois, puis cent  
 engendre un Eden par son Verbe tout puissant  
   
 Soudain je suis un havre  
-ou l’on peut être heureux  
+où l’on peut être heureux  
 Si tu plisses les yeux  
 les toits avoisinants  
 sont des montagnes bleues  
-et déjà l’on entend  
+Et déjà l’on entend  
 rire au loin les enfants  
-Sur la terre un instant  
-c‘est le royaume des cieux  
+Sur la terre un instant
+
+C‘est le royaume des cieux  
