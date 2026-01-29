@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tiny.css@0.12/dist/tiny.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -23,7 +23,7 @@
         }
 
         body {
-      
+            margin-top: 0 !important;
             display: flex;
             flex-direction: row;
             gap: 2em;
@@ -42,12 +42,17 @@
         nav {
             display: block;
             text-align: right;
-            width: 25ch;
+            min-width: 25ch;
+            width: 35%;
             background-color: var(--background-body);
         }
 
         .main div {
             min-width: 50ch;
+        }
+
+        section>p:first-child {
+            padding-top: 3em;
         }
 
         .hidden {
@@ -59,16 +64,16 @@
         }
 
         #mymenu {
-            padding-top: 2.5rem;
-            width: 25ch;
-            position: fixed;
+            /* width: 25ch; */
+            position: sticky;
+            padding-top: 1em;
             top: 0;
             color-scheme: dark;
             background-color: var(--background-body);
         }
 
         p {
-            padding: 0 0.5em;
+            padding: 0 1em;
             line-height: 1.5em;
         }
 
@@ -77,18 +82,27 @@
         }
 
         /* If nav has a poemtitle currently focused, but nav is not currently hovered, then poemtiles not in focus are hidden */
-        nav:has(.focus):not(:hover) .poemtitle:not(.focus) {
+        /* nav:has(.focus):not(:hover) .poemtitle:not(.focus) {
             display: none;
         }
 
         nav:has(.focus):hover .poemtitle:not(.focus) {
             display: block;
             opacity: 0.4
-        }
+        } */
 
-        section {
-            padding-top: 3rem;
-        }
+        /* collapsed state */
+nav:has(.focus):not(:hover):not(:focus-within)
+.poemtitle:not(.focus) {
+    display: none;
+}
+
+/* expanded state */
+nav:has(.focus):is(:hover, :focus-within)
+.poemtitle:not(.focus) {
+    display: block;
+    opacity: 0.4;
+}
 
         .poemtitle {
             font-size: 1.1rem;
@@ -100,22 +114,34 @@
         }
 
         @media (max-width: 80ch) {
+                 section>p:first-child {
+            padding-top: 0;
+        }
+
             nav {
                 text-align: center;
+                position: sticky;
+                top: 0;
             }
 
             #mymenu {
-                position: static; 
+                position: relative;
                 width: 100vw;
-                padding-bottom: 1rem;
+                padding-bottom: 1em;
             }
 
             body {
-                flex-direction: column
+                flex-direction: column;
+                max-width: 100vw;
+                gap: 0;
             }
         }
-        @media(pointer: coarse){
-            #mymenu{
+
+        @media(pointer: coarse) {
+            #mymenu:focus-within .poemtitle{
+                display: block;
+            }
+            #mymenu {
                 position: static;
             }
         }
