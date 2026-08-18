@@ -3,7 +3,7 @@ dans ce club très chic rue du Bourg l’Abbé
 Dans une brasserie près de Montparnasse  
 un bandeau que ma grand mère avait tricoté  
 Et un pull vert foncé dans un hameau du Périgord  
-ou il pleuvait, et l’on travaillait dur  
+où il pleuvait, et l’on travaillait dur  
   
 J’ai perdu un médaillon acheté en Italie  
 dans le sable d’une plage sur les bords de la Spree  
