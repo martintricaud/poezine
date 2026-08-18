@@ -1,5 +1,7 @@
 # Poezine
 
+Poèmes au format `markdown`, consultables sur [cette page]([martin.tricaud.github.io/poezine](https://martintricaud.github.io/poezine/))
+
 Shield: [![CC BY-NC-ND 4.0][cc-by-nc-nd-shield]][cc-by-nc-nd]
 
 This work is licensed under a

@@ -13,6 +13,6 @@ ou peut être d’un buis - je crois - je ne sais plus
 Puis je suis descendu à pied jusqu'à la Seine  
 Je voulais voir le ciel, l’orage qui s’enfuit  
   
-Je voulais voir le ciel,  
+Je voulais voir le ciel  
 peut-être même un peu  
 d’orange avant la nuit  
