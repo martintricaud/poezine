@@ -1,6 +1,6 @@
 On est le trente et un  
 Il fait au moins moins deux  
-dehors or en chemin  
+dehors, or en chemin  
 vers la fête  
 dans la nuit bleue soudain  
 surgit devant mes yeux  
