@@ -96,7 +96,7 @@
 
 
         /* collapsed state */
-        nav:has(.focus):not(:hover):not(:focus-within) .poemtitle:not(.focus) {
+        nav:has(.focus):not(:hover):not(:focus-within):not(.open) .poemtitle:not(.focus) {
             display: none;
         }
 
@@ -143,8 +143,15 @@
         }
 
         @media(pointer: coarse) {
-            #mymenu:focus-within .poemtitle {
+            /* touch expansion is driven by the .open class set in JS;
+               iOS neither focuses tapped links nor clears simulated
+               hover reliably, so :hover / :focus-within can't be trusted */
+            nav.open .poemtitle {
                 display: block;
+            }
+
+            nav:has(.focus):not(.open) .poemtitle:not(.focus) {
+                display: none;
             }
 
             #mymenu {
@@ -205,11 +212,28 @@ https://cdn.jsdelivr.net/npm/umbrellajs@3.3.3/umbrella.min.js
             u(target).addClass("focus")
         }
 
-        // on touch devices the tapped link keeps focus, holding the menu
-        // expanded via :focus-within; a tap outside the nav releases it
+        // touch menu cycle: when a poem is already selected, the first tap
+        // on the collapsed menu only expands it (no navigation); picking a
+        // title from the expanded menu navigates and collapses it again
+        const navEl = document.querySelector('nav');
+        // capture phase, so the check sees the state from before this
+        // click's own changeFocus handler sets .focus on the tapped link
+        navEl.addEventListener('click', (e) => {
+            if (!matchMedia('(pointer: coarse)').matches) return;
+            if (!e.target.closest('.poemtitle')) return;
+            if (document.querySelector('.focus') && !navEl.classList.contains('open')) {
+                e.preventDefault();
+                navEl.classList.add('open');
+            } else {
+                navEl.classList.remove('open');
+            }
+        }, true);
+
+        // a tap outside the nav collapses the menu to the active title
         document.addEventListener('pointerdown', (e) => {
-            if (!e.target.closest('nav') && document.activeElement) {
-                document.activeElement.blur();
+            if (!e.target.closest('nav')) {
+                navEl.classList.remove('open');
+                if (document.activeElement) document.activeElement.blur();
             }
         });
 
