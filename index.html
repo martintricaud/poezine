@@ -80,7 +80,11 @@
             display: none
         }
 
-        .hidden:target {
+        /* :target covers in-page navigation, where the browser applies it
+           before scrolling to the poem; .shown covers arriving with the hash
+           already set, where the sections do not exist yet at that moment */
+        .hidden:target,
+        .hidden.shown {
             display: block;
         }
 
@@ -202,11 +206,7 @@ https://cdn.jsdelivr.net/npm/umbrellajs@3.3.3/umbrella.min.js
                     u("#" + id).html(marked.parse(md));
                     u("#" + id).addClass("hidden");
 
-                    u(".poemtitle").each(el => {
-                        u(el).on('click', (e) => {
-                            changeFocus(u(el), ".poemtitle");
-                        });
-                    });
+                    syncFocusFromHash();
                 })
                 .catch(error => {
                     u("#" + id).html(`<div class="error">Error loading Notes.md: ${error.message}</div>`);
@@ -217,6 +217,26 @@ https://cdn.jsdelivr.net/npm/umbrellajs@3.3.3/umbrella.min.js
             u(group).each(el => { u(el).removeClass("focus") })
             u(target).addClass("focus")
         }
+
+        // both the highlighted title and the displayed poem follow the URL
+        // hash; deriving them from clicks alone leaves the previous title
+        // marked after the browser's back and forward buttons, and leaves the
+        // page blank when a poem URL is opened or reloaded directly
+        function syncFocusFromHash() {
+            const id = location.hash.slice(1);
+            const link = id && document.querySelector('.poemtitle[href="#' + id + '"]');
+            if (link) {
+                changeFocus(u(link), ".poemtitle");
+            } else {
+                u(".poemtitle").each(el => { u(el).removeClass("focus") });
+            }
+
+            u("section").each(el => { u(el).removeClass("shown") });
+            const section = id && document.getElementById(id);
+            if (section) u(section).addClass("shown");
+        }
+
+        window.addEventListener('hashchange', syncFocusFromHash);
 
         // touch menu cycle: when a poem is already selected, the first tap
         // on the collapsed menu only expands it (no navigation); picking a
