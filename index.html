@@ -55,6 +55,12 @@
             padding-top: 3em;
         }
 
+        section {
+            /* larger than the sticky nav can ever be, so anchor scrolls clamp
+               to the document top instead of hiding the first lines under it */
+            scroll-margin-top: 100vh;
+        }
+
         .hidden {
             display: none
         }
@@ -81,28 +87,17 @@
             text-align: center;
         }
 
-        /* If nav has a poemtitle currently focused, but nav is not currently hovered, then poemtiles not in focus are hidden */
-        /* nav:has(.focus):not(:hover) .poemtitle:not(.focus) {
+
+        /* collapsed state */
+        nav:has(.focus):not(:hover):not(:focus-within) .poemtitle:not(.focus) {
             display: none;
         }
 
-        nav:has(.focus):hover .poemtitle:not(.focus) {
+        /* expanded state */
+        nav:has(.focus):is(:hover, :focus-within) .poemtitle:not(.focus) {
             display: block;
-            opacity: 0.4
-        } */
-
-        /* collapsed state */
-nav:has(.focus):not(:hover):not(:focus-within)
-.poemtitle:not(.focus) {
-    display: none;
-}
-
-/* expanded state */
-nav:has(.focus):is(:hover, :focus-within)
-.poemtitle:not(.focus) {
-    display: block;
-    opacity: 0.4;
-}
+            opacity: 0.4;
+        }
 
         .poemtitle {
             font-size: 1.1rem;
@@ -114,9 +109,9 @@ nav:has(.focus):is(:hover, :focus-within)
         }
 
         @media (max-width: 80ch) {
-                 section>p:first-child {
-            padding-top: 0;
-        }
+            section>p:first-child {
+                padding-top: 0;
+            }
 
             nav {
                 text-align: center;
@@ -138,9 +133,10 @@ nav:has(.focus):is(:hover, :focus-within)
         }
 
         @media(pointer: coarse) {
-            #mymenu:focus-within .poemtitle{
+            #mymenu:focus-within .poemtitle {
                 display: block;
             }
+
             #mymenu {
                 position: static;
             }
