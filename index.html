@@ -40,6 +40,14 @@
             padding-top: 0;
         }
 
+        footer {
+            /* tiny.css gives footers 1rem top padding; zero it so the
+               height is exactly 2em */
+            height: 2em;
+            padding: 0;
+            flex: none;
+        }
+
         nav {
             /* with viewport-fit=cover the page starts at the physical screen
                top; keep the menu content below the notch / status bar */
@@ -170,6 +178,7 @@
         <div id="jardin-de-ville">Loading...</div>
         <div id="architecture-moderne">Loading...</div> -->
     </div>
+    <footer></footer>
     <script src="
 https://cdn.jsdelivr.net/npm/umbrellajs@3.3.3/umbrella.min.js
 "></script>
