@@ -2,16 +2,16 @@ Je cherche un café dans la ville immense comme un chien cherche sa place sur un
 
 Ces arbitrages font intervenir plusieurs paramètres dont certains sont assez triviaux, comme l’exposition au soleil, aux courants d’air ou encore au bruit. Lorsqu’on a une certaine expertise et une certaine exigence, d’autres paramètres entrent en ligne de compte, comme la température de l’éclairage électrique, la distance acceptable entre le premier rang de la terrasse et la chaussée - distance qui est elle même fonction de la largeur de la chaussée, ou encore le fond musical.  
 
-Sur ce dernier point il n’y a pas de règle absolue si ce n’est que la musique doit être “populaire” c’est a dire une musique pour chacun et pas seulement pour tout le monde; pour chacun y compris pour qui veut l’ignorer.  
+Sur ce dernier point il n’y a pas de règle absolue si ce n’est que la musique doit être “populaire” c’est-à-dire une musique pour chacun et pas seulement pour tout le monde ; pour chacun y compris pour qui veut l’ignorer.  
 
-Mais ces critères ne sont qu’assez superficiels, ou du moins consensuels.  Mon problème est que je cherche un café comme on cherche une exoplanète propice à l’apparition de la vie et bien plus.
+Mais ces critères ne sont qu’assez superficiels, ou du moins consensuels. Mon problème est que je cherche un café comme on cherche une exoplanète propice à l’apparition de la vie et bien plus.
 Je cherche un café qui serait une exclave de mon salon ; qui serait à mon salon ce que Kaliningrad est à la Russie : un avant poste stratégique permettant à la fois une projection rapide dans les lieux d’intérêt, et un repli tout aussi rapide, dans le cas de figure où la solitude, la besogne et la normalité de l’existence m’assignent à une fatale sédentarité.  
 
 Ce cas de figure est le plus fréquent, et je l’accepte avec dignité, tout en restant mobilisable à tout instant - d’où le besoin que j’ai de trianguler avec soin les bornes de ma zone de prospection cafetière: Idéalement, quelque part entre là où je dors et là où la ville ne dort pas.
 
 Commence ensuite la phase la plus ardue de ma recherche : Je cherche un café authentique (ceux dont les façades sont décorées de plantes en plastique sont en règle générale immédiatement disqualifiés) - un café authentique, mais authentiquement authentique, et non pas authentique comme sont authentiques les choses élaborées de toute pièce et avec grand soin et bon goût par un esprit commerçant soucieux d’assouvir mon désir d’authenticité en échange de mon argent.  
 
-Un café authentiquement authentique, donc, mais qui adhère dans une certaine mesure - et ce, sans artifices - aux codes esthétiques et culturels qu'exploitent les cafés facticement authentiques pour tenter coloniser mon imaginaire, par le choix des matériaux, des objets, des polices de caractère, et par une certaine hétérogénéité et usure des choses.
+Un café authentiquement authentique, donc, mais qui adhère tout de même, dans une certaine mesure - et ce, sans artifices - aux codes esthétiques et culturels qu'exploitent les cafés facticement authentiques pour tenter de coloniser mon imaginaire, par le choix des matériaux, des objets, des polices de caractère, et par une certaine hétérogénéité et usure des choses.
 
 Cela vaut aussi pour les gens qui fréquentent ce café, qui du reste doivent être ni trop nombreux, ni pas assez nombreux, de sorte que la présence d’un voisin ou d’une voisine soit une invitation et non une contingence ennuyeuse.  
 
