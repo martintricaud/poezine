@@ -229,6 +229,7 @@ https://cdn.jsdelivr.net/npm/umbrellajs@3.3.3/umbrella.min.js
             u(target).addClass("focus")
         }
 
+        const siteTitle = document.title;
         let shownId = null;
 
         // both the highlighted title and the displayed poem follow the URL
@@ -243,6 +244,10 @@ https://cdn.jsdelivr.net/npm/umbrellajs@3.3.3/umbrella.min.js
             } else {
                 u(".poemtitle").each(el => { u(el).removeClass("focus") });
             }
+
+            // the tab and any bookmark name the poem on display; the link text
+            // carries the newlines of the template it was built from
+            document.title = link ? link.textContent.trim() + " — " + siteTitle : siteTitle;
 
             u("section").each(el => { u(el).removeClass("shown") });
             const section = id && document.getElementById(id);
