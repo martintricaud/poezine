@@ -11,6 +11,15 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
+        :root {
+            /* tiny.css restyles the elements it knows about, but the surfaces
+               the browser paints itself (the canvas outside the body box, the
+               overscroll area, scrollbars, the strip behind the iOS status bar
+               under viewport-fit=cover) stay light until the page declares
+               which schemes it supports */
+            color-scheme: light dark;
+        }
+
         * {
             font-family: "Inria Serif";
             scroll-behavior: smooth;
@@ -93,7 +102,6 @@
             position: sticky;
             padding-top: 1em;
             top: 0;
-            color-scheme: dark;
             background-color: var(--background-body);
         }
 
@@ -188,7 +196,7 @@ https://cdn.jsdelivr.net/npm/umbrellajs@3.3.3/umbrella.min.js
             { file: "Architecture moderne", id: "architecture-moderne" },
             { file: "Jardin de ville", id: "jardin-de-ville" },
             { file: "Litanie des objets perdus", id: "litanie" },
-            { file: "Coherence du discours poetique", id: "coherence" },
+            { file: "Cohérence du discours poetique", id: "coherence" },
             { file: "Saint-Sylvestre", id: "saint-sylvestre" },
             { file: "Je cherche un café", id: "cafe" },
         ].forEach(({ file, id }) => {
