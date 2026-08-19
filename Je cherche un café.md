@@ -19,7 +19,7 @@ Une population authentiquement authentique doit comporter des personnes riches e
 
 Il doit y avoir des personnes de tous genres, et notamment des femmes pour ce qui me concerne, peut-être juste une femme, parce qu’on cherche l’amour, ou plutôt parce qu’on veut que l’amour nous trouve alors qu’on fait mine de ne pas le chercher, tout affairé qu’on est à quelque activité studieuse ou créative, activité qui peut nécessiter - ou non - la présence d’une prise électrique.
 
-Enfin, en plus de tout ces critères, ou peut-être malgré tous ces critères, ce café dont je dissèque l'essence à travers un appareillage de lentilles et de prismes doit me regarder en retour au travers de ce même appareillage, le faire voler en éclat, et me frapper en plein visage de sa réalité. 
+Enfin, en plus de tout ces critères, ou peut-être malgré tous ces critères, ce café idéal dont je dissèque l'essence à travers un appareillage de lentilles et de prismes doit me regarder en retour au travers de ce même appareillage, le faire voler en éclat, et me frapper en plein visage de sa réalité. 
 
 J'ai écrit tout cela assis à un café, qui s'appelle Le Volcan, et je ne sais pas s'il s'agit du café que je cherchais, ou si je me suis résigné au compromis.
 
