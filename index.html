@@ -80,8 +80,10 @@
         }
 
         section {
-            /* larger than the sticky nav can ever be, so anchor scrolls clamp
-               to the document top instead of hiding the first lines under it */
+            /* tapping the title of the poem already on display re-resolves the
+               fragment without changing the hash, so no hashchange fires and
+               the browser scrolls the poem under the sticky menu; a margin
+               larger than the viewport clamps that scroll to the document top */
             scroll-margin-top: 100vh;
         }
 
@@ -89,10 +91,10 @@
             display: none
         }
 
-        /* :target covers in-page navigation, where the browser applies it
-           before scrolling to the poem; .shown covers arriving with the hash
-           already set, where the sections do not exist yet at that moment */
-        .hidden:target,
+        /* .shown is set from the URL hash in JS and is the only thing that
+           displays a poem; :target must not be used here, because the browser
+           applies it while the previous poem is still displayed and resolves
+           the fragment scroll against a document holding both */
         .hidden.shown {
             display: block;
         }
@@ -227,6 +229,8 @@ https://cdn.jsdelivr.net/npm/umbrellajs@3.3.3/umbrella.min.js
             u(target).addClass("focus")
         }
 
+        let shownId = null;
+
         // both the highlighted title and the displayed poem follow the URL
         // hash; deriving them from clicks alone leaves the previous title
         // marked after the browser's back and forward buttons, and leaves the
@@ -243,6 +247,15 @@ https://cdn.jsdelivr.net/npm/umbrellajs@3.3.3/umbrella.min.js
             u("section").each(el => { u(el).removeClass("shown") });
             const section = id && document.getElementById(id);
             if (section) u(section).addClass("shown");
+
+            // the displayed poem always starts at the top of the document, so
+            // every swap belongs at scroll position 0; the browser cannot do
+            // this itself, because the section is still display:none when it
+            // resolves the fragment
+            if (id !== shownId) {
+                shownId = id;
+                window.scrollTo({ top: 0, behavior: "instant" });
+            }
         }
 
         window.addEventListener('hashchange', syncFocusFromHash);
